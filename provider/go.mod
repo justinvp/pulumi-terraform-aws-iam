@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-xyz/provider
+module github.com/justinvp/pulumi-terraform-aws-iam/provider
 
 go 1.18
 

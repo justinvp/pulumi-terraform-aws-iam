@@ -11,11 +11,11 @@ _utilities.register(
     resource_modules="""
 [
  {
-  "pkg": "xyz",
+  "pkg": "terraform-aws-iam",
   "mod": "index",
-  "fqn": "pulumi_xyz",
+  "fqn": "pulumi_terraform_aws_iam",
   "classes": {
-   "xyz:index:Random": "Random"
+   "terraform-aws-iam:index:Random": "Random"
   }
  }
 ]
@@ -23,9 +23,9 @@ _utilities.register(
     resource_packages="""
 [
  {
-  "pkg": "xyz",
-  "token": "pulumi:providers:xyz",
-  "fqn": "pulumi_xyz",
+  "pkg": "terraform-aws-iam",
+  "token": "pulumi:providers:terraform-aws-iam",
+  "fqn": "pulumi_terraform_aws_iam",
   "class": "Provider"
  }
 ]
