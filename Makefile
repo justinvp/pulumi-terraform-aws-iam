@@ -1,10 +1,10 @@
-PROJECT_NAME := Pulumi Xyz Resource Provider
+PROJECT_NAME := Pulumi Terraform AWS IAM Module Provider
 
-PACK             := xyz
+PACK             := terraform-aws-iam
 PACKDIR          := sdk
-PROJECT          := github.com/pulumi/pulumi-xyz
-NODE_MODULE_NAME := @pulumi/xyz
-NUGET_PKG_NAME   := Pulumi.Xyz
+PROJECT          := github.com/justinvp/pulumi-terraform-aws-iam
+NODE_MODULE_NAME := @pulumi/terraform-aws-iam
+NUGET_PKG_NAME   := Pulumi.TerraformAwsIam
 
 PROVIDER        := pulumi-resource-${PACK}
 VERSION         ?= $(shell pulumictl get version)
