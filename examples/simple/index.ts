@@ -1,5 +1,7 @@
-import * as xyz from "@pulumi/xyz";
+import * as iam from "@pulumi/terraform-aws-iam";
 
-const random = new xyz.Random("my-random", { length: 24 });
-
-export const output = random.result;
+const account = new iam.IamAccount("account", {
+    accountAlias: "new-test-account-awesome-company",
+    minimumPasswordLength: 6,
+    requireNumbers: false,
+});
