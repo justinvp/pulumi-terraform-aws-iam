@@ -5,23 +5,23 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 // Export members:
+export { IamAccountArgs } from "./iamAccount";
+export type IamAccount = import("./iamAccount").IamAccount;
+export const IamAccount: typeof import("./iamAccount").IamAccount = null as any;
+utilities.lazyLoad(exports, ["IamAccount"], () => require("./iamAccount"));
+
 export { ProviderArgs } from "./provider";
 export type Provider = import("./provider").Provider;
 export const Provider: typeof import("./provider").Provider = null as any;
 utilities.lazyLoad(exports, ["Provider"], () => require("./provider"));
-
-export { RandomArgs } from "./random";
-export type Random = import("./random").Random;
-export const Random: typeof import("./random").Random = null as any;
-utilities.lazyLoad(exports, ["Random"], () => require("./random"));
 
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "terraform-aws-iam:index:Random":
-                return new Random(name, <any>undefined, { urn })
+            case "terraform-aws-iam:index:IamAccount":
+                return new IamAccount(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }

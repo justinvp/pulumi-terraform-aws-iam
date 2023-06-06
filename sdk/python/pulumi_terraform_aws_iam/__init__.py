@@ -5,8 +5,8 @@
 from . import _utilities
 import typing
 # Export this package's modules as members:
+from .iam_account import *
 from .provider import *
-from .random import *
 _utilities.register(
     resource_modules="""
 [
@@ -15,7 +15,7 @@ _utilities.register(
   "mod": "index",
   "fqn": "pulumi_terraform_aws_iam",
   "classes": {
-   "terraform-aws-iam:index:Random": "Random"
+   "terraform-aws-iam:index:IamAccount": "IamAccount"
   }
  }
 ]

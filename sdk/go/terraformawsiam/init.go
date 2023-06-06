@@ -20,8 +20,8 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
-	case "terraform-aws-iam:index:Random":
-		r = &Random{}
+	case "terraform-aws-iam:index:IamAccount":
+		r = &IamAccount{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
